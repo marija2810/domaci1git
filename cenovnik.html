@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Pozitif</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="top" data-spy="scroll">
+	
+
+	<header id="home">
+
+		<section class="top-nav hidden-xs">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="top-left">
+
+							<ul>
+								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							</ul>
+
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="top-right">
+							<p>Lokacija:<span> Višnjička 23, Beograd</span></p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<div id="main-nav">
+
+			<nav class="navbar">
+				<div class="container">
+
+					<div class="navbar-header">
+						<a href="index.html" class="navbar-brand">Pozitif</a>
+						
+					</div>
+
+					<div class="navbar-collapse collapse" id="ftheme">
+
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="index.html">Početna</a></li>
+							<li><a href="onama.html">O nama</a></li>
+							<li><a href="cenovnik.html">Cenovnik</a></li>
+							<li><a href="noviProizvod.html">Administracija</a></li>
+						</ul>
+
+					</div>
+
+				</div>
+			</nav>
+		</div>
+
+	</header>
+	<div class="container">
+		<h1 class="text-center">Cenovnik</h1>
+		<div id="kategorije" class="text-center">
+
+		</div>
+		<h3>Sortiranje</h3>
+		<div class="row">
+			<div class="col-md-6">
+				<select class="form-control" id="kolona" onchange="popuniProizvode()">
+					<option value="naziv" >Naziv</option>
+					<option value="cena" >Cena</option>
+				</select>
+			</div>
+			<div class="col-md-6">
+				<select class="form-control" id="order" onchange="popuniProizvode()">
+					<option value="asc">Rastuće</option>
+					<option value="desc">Opadajuće</option>
+				</select>
+			</div>
+		</div>
+
+		<div id="cenovnik">
+
+		</div>
+
+
+	</div>
+
+
+	<div id="bottom-footer" class="hidden-xs">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="footer-left">
+						&copy; Pozitif
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	
+
+</body>
+
+</html>
