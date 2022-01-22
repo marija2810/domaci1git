@@ -15,7 +15,6 @@
 </head>
 
 <body id="top" data-spy="scroll">
-	
 
 	<header id="home">
 
@@ -38,7 +37,7 @@
 
 					<div class="col-md-6">
 						<div class="top-right">
-							<p>Lokacija:<span> Višnjička 23, Beograd</span></p>
+							<p>Lokacija:<span>Višnjička 23, Beograd</span></p>
 						</div>
 					</div>
 
@@ -53,7 +52,12 @@
 
 					<div class="navbar-header">
 						<a href="index.html" class="navbar-brand">Pozitif</a>
-						
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ftheme">
+							<span class="sr-only">Toggle</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
 					</div>
 
 					<div class="navbar-collapse collapse" id="ftheme">
@@ -80,13 +84,13 @@
 		<h3>Sortiranje</h3>
 		<div class="row">
 			<div class="col-md-6">
-				<select class="form-control" id="kolona" onchange="popuniProizvode()">
+				<select class="form-control" id="kolona" onchange="popuniProizvode(sessionStorage.getItem('broj'))">
 					<option value="naziv" >Naziv</option>
 					<option value="cena" >Cena</option>
 				</select>
 			</div>
 			<div class="col-md-6">
-				<select class="form-control" id="order" onchange="popuniProizvode()">
+				<select class="form-control" id="order" onchange="popuniProizvode(sessionStorage.getItem('broj'))">
 					<option value="asc">Rastuće</option>
 					<option value="desc">Opadajuće</option>
 				</select>
@@ -100,27 +104,7 @@
 
 	</div>
 
-	<style>
-		.marquee {
-		width: 100%;
-		line-height: 60px;
-			background-color:oldlace;
-			color: pink;
-			white-space: nowrap;
-			overflow: hidden;
-			height: 5;
-		}
-		.marquee p {
-			display: inline-block;
-			padding-left: 100%;
-			
-			animation: marquee 10s linear infinite;
-		}
-		@keyframes marquee {
-			0%   { transform: translate(0, 0); }
-			100% { transform: translate(-100%,0); }
-		}
-	</style> 
+
 
 	<div id="bottom-footer" class="hidden-xs">
 		<div class="container">
@@ -169,6 +153,7 @@
 	<script>
 	popuniKategorije();
 	popuniProizvode(0);
+	sessionStorage.setItem("broj", "0");
 	</script>
 	
 
