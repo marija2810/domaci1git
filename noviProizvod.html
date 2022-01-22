@@ -8,7 +8,9 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 
-	
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -79,7 +81,8 @@
 		<h1 class="text-center">Administracija proizvoda</h1>
 		<label for="sifra">Šifra</label>
 	  <input type="text" name="sifra" id="sifra" class="form-control" placeholder="Unesite šifru">
-		
+		<label for="dugme">Proveri</label>
+	  <input type="button" name="dugme" id="dugme" class="form-control btn-success" value="Proveri" onclick="provera()">
 
 		<br><br>
 		<div id="podaci">
@@ -87,7 +90,27 @@
 	</div>
 
 
-
+	<style>
+		.marquee {
+		width: 100%;
+		line-height: 60px;
+			background-color:#e4d4d4;
+			color:pink;
+			white-space: nowrap;
+			overflow: hidden;
+			height: 10;
+		}
+		.marquee p {
+			display: inline-block;
+			padding-left: 100%;
+			
+			animation: marquee 10s linear infinite;
+		}
+		@keyframes marquee {
+			0%   { transform: translate(0, 0); }
+			100% { transform: translate(-100%,0); }
+		}
+	</style> 
 	<div id="bottom-footer" class="hidden-xs">
 		<div class="container">
 			<div class="row">
@@ -103,7 +126,23 @@
 
 
 
-	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+	<script src="js/script.js"></script>
+	<script>
+	function provera(){
+		var sifra = $("#sifra").val();
+		$.ajax({
+			url: "proveri.php",
+			data: "sifra="+sifra,
+			success: function(html){
+				$("#podaci").html(html);
+			}
+		})
+	}
+
+	</script>
 </body>
 
 </html>
