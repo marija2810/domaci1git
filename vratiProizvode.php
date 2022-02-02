@@ -5,20 +5,15 @@ $id = $_GET['id'];
 $order = $_GET['order'];
 $kolona = $_GET['kolona'];
 
-if($id == 0){
+
   $sql = "SELECT * FROM proizvod p 
-  JOIN kategorija k ON p.kategorijaID = k.kategorijaID 
+  JOIN kategorija k ON k.kategorijaID = p.kategorijaID 
   JOIN velicina v ON p.velicinaID = v.velicinaID 
   order by $kolona $order";
-}else{
-  $sql = "SELECT * FROM proizvod p 
-  JOIN kategorija k ON p.kategorijaID = k.kategorijaID 
-  JOIN velicina v ON p.velicinaID = v.velicinaID where k.kategorijaID=$id  
-  order by $kolona $order";
-}
 
 
-$rezultat = $konekcija->query($sql);
+
+$rezultat = $konekcija->query($sql) or die($konekcija->error);
 
 
  ?>
