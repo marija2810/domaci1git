@@ -115,6 +115,17 @@
 
 					</div>
 				</div>
+				<div class="col-md-6">
+					<div class="top-right">
+						
+							<h5>Naša lokacija</h5>
+							<div class="map-wrapper">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.199810797072!2d20.515337015487585!3d44.81749387909865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a585f1ef9a5%3A0x98b5fa07fae07c!2zVmnFoW5qacSNa2EsIEJlb2dyYWQ!5e0!3m2!1sen!2srs!4v1643882822597!5m2!1sen!2srs" width="700" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+							</div>
+						 
+					</div>
+				</div>
+				
 			</div>
 		</div>
 	</div>
@@ -123,8 +134,7 @@
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
-	<script src="js/script.js"></script>
+	
 	<script>
 	function popuniKategorije(){
 		$.ajax({
